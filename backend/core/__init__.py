@@ -1,3 +1,0 @@
-"""
-Core Django project package.
-"""

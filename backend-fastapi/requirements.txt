@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+sqlalchemy
+psycopg[binary]
+redis
+python-multipart
+celery
+# We will use Django's sessions, but FastAPI needs to read the DB
+# No Django here, strictly FastAPI things

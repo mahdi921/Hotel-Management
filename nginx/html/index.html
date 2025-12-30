@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container { text-align: center; color: white; padding: 2rem; }
+        h1 { font-size: 3rem; margin-bottom: 1rem; }
+        p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem; }
+        .links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        a {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        a:hover { background: rgba(255,255,255,0.3); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hotel Management</h1>
+        <p>Welcome to the Local Smart Hotel Management System</p>
+        <div class="links">
+            <a href="/admin/">Django Admin</a>
+            <a href="/api/docs">API Documentation</a>
+            <a href="/api/rooms/">View Rooms API</a>
+        </div>
+    </div>
+</body>
+</html>
