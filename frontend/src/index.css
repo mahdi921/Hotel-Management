@@ -1,0 +1,159 @@
+/* Vazirmatn Font & Base Styles */
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RTL & Font Settings */
+:root {
+    direction: rtl;
+}
+
+html {
+    direction: rtl;
+}
+
+body {
+    font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    direction: rtl;
+    text-align: right;
+    @apply bg-gray-50 text-gray-900;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400;
+}
+
+/* Tape Chart Styles */
+.tape-chart-container {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.tape-chart-grid {
+    display: grid;
+    gap: 1px;
+    background-color: #e5e7eb;
+}
+
+.tape-chart-cell {
+    min-width: 40px;
+    height: 48px;
+    @apply bg-white flex items-center justify-center text-xs;
+}
+
+.tape-chart-header {
+    @apply bg-gray-100 font-bold sticky top-0 z-10;
+}
+
+.tape-chart-room-label {
+    @apply bg-gray-50 font-medium sticky right-0 z-20 px-3;
+    min-width: 120px;
+}
+
+/* Booking Block Styles */
+.booking-block {
+    @apply rounded-lg px-2 py-1 text-white text-xs font-medium truncate cursor-pointer transition-all duration-200 hover:shadow-lg hover:scale-[1.02];
+    position: absolute;
+    height: calc(100% - 8px);
+    top: 4px;
+}
+
+.booking-pending {
+    @apply bg-amber-500;
+}
+
+.booking-confirmed {
+    @apply bg-blue-500;
+}
+
+.booking-checked_in {
+    @apply bg-green-500;
+}
+
+.booking-checked_out {
+    @apply bg-gray-400;
+}
+
+/* Room Status Colors */
+.room-clean {
+    @apply bg-green-100 text-green-700;
+}
+
+.room-dirty {
+    @apply bg-amber-100 text-amber-700;
+}
+
+.room-occupied {
+    @apply bg-blue-100 text-blue-700;
+}
+
+.room-maintenance {
+    @apply bg-red-100 text-red-700;
+}
+
+/* Status Badge */
+.status-badge {
+    @apply px-2 py-1 rounded-full text-xs font-bold;
+}
+
+/* Card Styles */
+.stat-card {
+    @apply bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+/* Button Styles */
+.btn-primary {
+    @apply bg-primary-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:bg-primary-700 active:scale-95;
+}
+
+.btn-secondary {
+    @apply bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:bg-gray-300 active:scale-95;
+}
+
+/* Input Styles */
+.input-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200;
+    direction: rtl;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    @apply fixed inset-0 bg-black/50 flex items-center justify-center z-50;
+}
+
+.modal-content {
+    @apply bg-white rounded-2xl shadow-2xl p-6 max-w-lg w-full mx-4 animate-fade-in;
+}

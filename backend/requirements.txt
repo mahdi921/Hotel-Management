@@ -1,0 +1,29 @@
+# Django Core (Version 5.2.x - explicitly pinned per requirements)
+Django>=5.2,<5.3
+
+# PostgreSQL adapter (CRITICAL: binary tag for Alpine compatibility)
+psycopg[binary]
+
+# Professional Admin UI (Tailwind-based)
+django-unfold
+
+# API Layer
+fastapi
+uvicorn[standard]
+
+# Production WSGI Server
+gunicorn
+
+# Async Task Queue
+celery
+
+# Redis client
+redis
+
+# Celery results backend for Django
+django-celery-results
+
+# Additional utilities
+python-dotenv
+Pillow
+django-cors-headers
